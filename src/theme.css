@@ -1,0 +1,338 @@
+:root {
+  --lime: #f04452;
+  --cyan: #ff9a76;
+  --orange: #ffc857;
+  --violet: #c58cff;
+}
+
+.app-shell {
+  background: radial-gradient(circle at 80% -10%, rgba(240, 68, 82, .18), transparent 38%), var(--bg);
+}
+
+.top-actions {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 18px;
+}
+
+.topbar-identity {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  gap: 12px;
+}
+
+.topbar-brand-mark {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  color: #ff6570;
+  border: 1px solid rgba(240, 68, 82, .78);
+  border-radius: 10px;
+  background: rgba(240, 68, 82, .1);
+  box-shadow: 0 0 9px rgba(240, 68, 82, .5), 0 0 28px rgba(240, 68, 82, .18), inset 0 0 12px rgba(240, 68, 82, .1);
+}
+
+.topbar-brand-mark svg {
+  filter: drop-shadow(0 0 5px rgba(255, 101, 112, .95));
+  stroke-width: 2.2;
+}
+
+.current-date {
+  color: #f3d9d8;
+  font: 500 11px var(--mono);
+  line-height: 1.35;
+  text-align: right;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.app-shell svg {
+  stroke-width: 1.85;
+}
+
+.topbar h1,
+.page-heading-row h2,
+.section-heading h3,
+.panel h3,
+.finance-status h3,
+.settings-card h3 {
+  font-weight: 750;
+  text-rendering: geometricPrecision;
+}
+
+.eyebrow,
+.side-label,
+.current-date,
+.chart-period,
+.toolbar-note {
+  font-variant-numeric: tabular-nums;
+}
+
+.finance-mini {
+  display: none;
+}
+
+.sidebar {
+  background: linear-gradient(180deg, rgba(28, 16, 20, .92), rgba(15, 21, 24, .88));
+}
+
+.brand-mark {
+  color: var(--lime);
+  border-color: rgba(240, 68, 82, .65);
+  box-shadow: 0 0 22px rgba(240, 68, 82, .12);
+}
+
+.nav-button.active {
+  background: rgba(240, 68, 82, .12);
+  box-shadow: inset 3px 0 var(--lime);
+}
+
+.vehicle-hero {
+  background: linear-gradient(110deg, #28191d, #171b20 55%, #24191c);
+}
+
+.vehicle-hero:after,
+.finance-status:before {
+  background: linear-gradient(90deg, transparent, var(--lime), transparent);
+}
+
+.primary-button {
+  background: var(--lime);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(240, 68, 82, .2);
+}
+
+.primary-button:hover {
+  background: #ff5b67;
+}
+
+.hero-actions .primary-button {
+  display: none;
+}
+
+.finance-status {
+  position: relative;
+  display: grid;
+  gap: 18px;
+  margin-top: 12px;
+  padding: 21px 23px;
+  overflow: hidden;
+  border: 1px solid rgba(240, 68, 82, .3);
+  border-radius: 12px;
+  background: linear-gradient(120deg, rgba(72, 25, 32, .8), rgba(26, 24, 29, .96));
+}
+
+.finance-status:before {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  height: 2px;
+}
+
+.finance-status-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.finance-status-heading > div:nth-child(2) {
+  flex: 1;
+}
+
+.finance-status-icon {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  color: var(--lime);
+  border-radius: 9px;
+  background: rgba(240, 68, 82, .14);
+}
+
+.finance-status h3 {
+  margin: 4px 0 5px;
+  font-size: 15px;
+}
+
+.finance-status-heading span,
+.finance-status-grid span,
+.finance-status-note {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.finance-status-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.finance-status-grid > div {
+  display: grid;
+  gap: 7px;
+  padding: 13px;
+  border: 1px solid rgba(255, 255, 255, .08);
+  border-radius: 8px;
+  background: rgba(8, 10, 12, .2);
+}
+
+.finance-status-grid strong {
+  font-size: 17px;
+  letter-spacing: -.04em;
+}
+
+.finance-status-note {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.finance-status-note svg {
+  color: var(--lime);
+}
+
+.finance-progress {
+  display: grid;
+  gap: 8px;
+}
+
+.finance-progress > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.finance-progress span {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.finance-progress strong {
+  color: var(--soft);
+  font: 10px var(--mono);
+}
+
+.finance-progress .progress-line {
+  margin: 0;
+}
+
+.finance-settings {
+  grid-template-columns: 40px minmax(0, 1fr);
+  align-items: start;
+  margin-top: 12px;
+  border-color: rgba(240, 68, 82, .24);
+}
+
+.finance-settings .settings-icon.red {
+  color: var(--lime);
+  background: rgba(240, 68, 82, .12);
+}
+
+.finance-settings-copy h3 {
+  margin: 0 0 5px;
+}
+
+.finance-settings-copy p:last-child {
+  max-width: 520px;
+}
+
+.finance-settings-form {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  align-items: end;
+}
+
+.finance-settings-preview {
+  display: grid;
+  gap: 5px;
+  padding: 11px 12px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--surface);
+}
+
+.finance-settings-preview span,
+.finance-settings-preview small {
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.finance-settings-preview strong {
+  font-size: 16px;
+}
+
+.finance-settings-form .primary-button {
+  min-height: 38px;
+}
+
+.history-row .icon-button {
+  flex: 0 0 auto;
+}
+
+@media (min-width: 761px) and (max-width: 1250px) {
+  .main-content {
+    padding-inline: 28px;
+  }
+
+  .topbar {
+    height: 108px;
+  }
+
+  .vehicle-hero {
+    min-height: 320px;
+  }
+
+  .hero-copy {
+    padding: 38px 0 30px 30px;
+  }
+
+  .hero-copy h2 {
+    font-size: clamp(32px, 3.8vw, 43px);
+  }
+
+  .hero-details {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 760px) {
+  .finance-status {
+    padding: 17px;
+  }
+
+  .finance-status-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .finance-settings {
+    grid-template-columns: 34px minmax(0, 1fr);
+    padding: 17px;
+  }
+
+  .finance-settings-form {
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr;
+  }
+
+  .current-date {
+    font-size: 10px;
+    white-space: normal;
+    max-width: 132px;
+  }
+
+  .topbar-identity {
+    gap: 9px;
+  }
+
+  .topbar-brand-mark {
+    width: 34px;
+    height: 34px;
+    flex-basis: 34px;
+  }
+}
